@@ -9,6 +9,7 @@ import androidx.compose.ui.platform.LocalContext
 import androidx.lifecycle.viewmodel.compose.viewModel
 import androidx.navigation.NavHostController
 import androidx.navigation.compose.NavHost
+import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
 import com.example.minggu7.Model.DataJK
 import com.example.minggu7.ui.view.TampilMahasiswaView
@@ -25,7 +26,7 @@ fun Navigasi(
     viewModel: MahasiswaViewModel = viewModel(),
     navHost: NavHostController = rememberNavController()
 ){
-    Scaffold {
+    Scaffold { isipadding ->
         val uiState by viewModel.uiState.collectAsState()
         NavHost(
             modifier = modifier.padding(isipadding),
