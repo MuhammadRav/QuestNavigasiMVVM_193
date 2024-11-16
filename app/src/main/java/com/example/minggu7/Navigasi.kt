@@ -14,10 +14,10 @@ import com.example.minggu7.Model.DataJK
 import com.example.minggu7.ui.view.TampilMahasiswaView
 import com.example.minggu7.ui.viewModel.MahasiswaViewModel
 
-enum class Halaman(
+enum class Halaman {
     Form,
     Data
-)
+}
 
 @Composable
 fun Navigasi(
