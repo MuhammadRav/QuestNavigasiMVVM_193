@@ -35,11 +35,12 @@ fun FormulirView(
     onClickButton: (MutableList<String>) -> Unit
 ){
     var nama by remember { mutableStateOf("") }
+    var nim by remember { mutableStateOf("") }
+    var jenisK by remember { mutableStateOf("") }
     var email by remember { mutableStateOf("") }
     var nomorHp by remember { mutableStateOf("") }
     var alamat by remember { mutableStateOf("") }
-    var jenisK by remember { mutableStateOf("") }
-    // tambahkan NIM
+
     var listData: MutableList<String> = mutableListOf(nama, jenisK, alamat)
 
     Column {
@@ -48,7 +49,7 @@ fun FormulirView(
             .padding(16.dp),
             horizontalAlignment = Alignment.CenterHorizontally) {
             Text(
-                "BIODATA",
+                "Form Pendaftaran",
                 fontWeight = FontWeight.Bold,
                 fontSize = 28.sp
             )
@@ -64,6 +65,19 @@ fun FormulirView(
                 placeholder = {
                     Text("Masukkan Nama Anda", color = Color.Gray)
                 }
+            )
+
+            TextField(
+                value = nim,
+                onValueChange = { nim = it },
+                modifier = Modifier
+                    .fillMaxWidth()
+                    .padding(5.dp),
+                label = { Text("NIM") },
+                placeholder = {
+                    Text("Masukkan NIM Anda", color = Color.Gray)
+                },
+                keyboardOptions = KeyboardOptions(keyboardType = KeyboardType.Number)
             )
 
             Row {
