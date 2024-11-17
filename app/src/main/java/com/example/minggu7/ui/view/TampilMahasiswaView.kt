@@ -7,6 +7,7 @@ import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
+import androidx.compose.material3.Button
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
@@ -18,7 +19,8 @@ import com.example.minggu7.Model.Mahasiswa
 
 @Composable
 fun TampilMahasiswaView(
-    mhs: Mahasiswa
+    mhs: Mahasiswa,
+    onClickButton: () -> Unit
 ){
     Column(modifier = Modifier.fillMaxSize()
         .padding(16.dp),
@@ -54,6 +56,15 @@ fun TampilMahasiswaView(
             judul = "Alamat",
             isinya = mhs.alamat
         )
+        Spacer(modifier = Modifier.padding(20.dp))
+
+        Button(
+            onClick = onClickButton,
+            modifier = Modifier.fillMaxWidth()
+        ) {
+            Text("Kembali")
+        }
+
     }
 }
 
