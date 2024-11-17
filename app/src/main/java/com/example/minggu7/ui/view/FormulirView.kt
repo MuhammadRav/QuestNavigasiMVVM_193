@@ -29,7 +29,7 @@ import androidx.compose.ui.unit.sp
 import com.example.minggu7.Model.DataJK
 
 @Composable
-fun LatihanUserInput(
+fun FormulirView(
     modifier: Modifier = Modifier,
     pilihanJK: List<String>,
     onClickButton: (MutableList<String>) -> Unit

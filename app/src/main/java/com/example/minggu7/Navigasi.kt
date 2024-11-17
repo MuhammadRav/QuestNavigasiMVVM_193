@@ -4,6 +4,7 @@ import androidx.compose.foundation.layout.padding
 import androidx.compose.material3.Scaffold
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.collectAsState
+import androidx.compose.runtime.getValue
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.platform.LocalContext
 import androidx.lifecycle.viewmodel.compose.viewModel
@@ -12,6 +13,7 @@ import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
 import com.example.minggu7.Model.DataJK
+import com.example.minggu7.ui.view.FormulirView
 import com.example.minggu7.ui.view.TampilMahasiswaView
 import com.example.minggu7.ui.viewModel.MahasiswaViewModel
 
@@ -32,7 +34,7 @@ fun Navigasi(
             modifier = modifier.padding(isipadding),
             navController = navHost, startDestination = Halaman.Form.name
         ){
-            composable(route = Halaman.Form.name){  //import yang route
+            composable(route = Halaman.Form.name){
                 val konteks = LocalContext.current
                 FormulirView(
                     pilihanJK = DataJK.isiJK.map{
@@ -46,7 +48,10 @@ fun Navigasi(
             }
             composable(route = Halaman.Data.name){
                 TampilMahasiswaView(
-                    mhs = uiState
+                    mhs = uiState,
+//                    onClickButton = {
+//                        navHost.popBackStack()
+//                    }
                 )
             }
         }
