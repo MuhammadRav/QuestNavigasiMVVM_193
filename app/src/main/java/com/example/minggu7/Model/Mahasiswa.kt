@@ -1,7 +1,5 @@
 package com.example.minggu7.Model
 
-import android.provider.ContactsContract.CommonDataKinds.Email
-
 data class Mahasiswa(
     val nama : String="",
     val nim : String="",
