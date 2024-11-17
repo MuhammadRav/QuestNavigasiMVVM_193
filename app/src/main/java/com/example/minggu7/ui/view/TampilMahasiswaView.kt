@@ -62,9 +62,8 @@ fun TampilMahasiswaView(
             onClick = onClickButton,
             modifier = Modifier.fillMaxWidth()
         ) {
-            Text("Kembali")
+            Text("Kembali Bro")
         }
-
     }
 }
 
