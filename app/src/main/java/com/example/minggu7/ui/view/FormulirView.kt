@@ -41,7 +41,7 @@ fun FormulirView(
     var nomorHp by remember { mutableStateOf("") }
     var alamat by remember { mutableStateOf("") }
 
-    var listData: MutableList<String> = mutableListOf(nama, jenisK, alamat)
+    var listData: MutableList<String> = mutableListOf(nama,nim, jenisK, email, nomorHp, alamat)
 
     Column {
         Column (modifier = Modifier
